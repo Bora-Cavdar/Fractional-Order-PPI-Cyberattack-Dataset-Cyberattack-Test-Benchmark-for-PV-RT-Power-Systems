@@ -18,7 +18,7 @@ In addition, the reference time-domain responses obtained using the proposed Fra
 
 This folder contains the cyberattack benchmark platform developed for testing and comparing different controller structures under identical PV-RT LFC cyberattack scenarios.
 
-Researchers can replace the provided PPI or FOPPI controller block in the Simulink model with their own controller structure and evaluate its performance under the same random varying load conditions, false data injection (FDI) attacks, and denial-of-service (DoS) attacks.
+Researchers can replace the provided PID controller block in the Simulink model with their own controller structure and evaluate its performance under the same random varying load conditions, false data injection (FDI) attacks, and denial-of-service (DoS) attacks.
 
 The benchmark scripts generate ITAE-based performance results and allow the tested controller to be compared with the proposed FOPPI controller and the classical PPI controller reported in the related study.
 
@@ -29,14 +29,6 @@ This folder contains the cyberattack dataset generated from the FOPPI-controlled
 The dataset includes time-domain responses of the LFC system under random varying load conditions and cyberattack scenarios. The recorded variables include scenario ID, load change, area frequency deviations, tie-line power deviation, simulation time, and class labels.
 
 The dataset consists of normal scenarios and attacked scenarios generated under different FDI and DoS severities and attack locations. It is shared to support reproducible research and to enable fair comparison of different machine learning and deep learning-based cyberattack detection methods in LFC systems.
-
-### 4. 1D-CNN Baseline Model for Cyberattack Detection
-
-This folder contains the deep learning baseline model developed for cyberattack detection in the PV-RT LFC system. The baseline model is based on a one-dimensional convolutional neural network (1D-CNN) trained using only normal operating scenarios.
-
-The model detects cyberattacks using a reconstruction-error-based anomaly score. Under normal operating conditions, the reconstruction error remains small, whereas FDI and DoS attacks lead to larger reconstruction errors. A threshold-based decision rule is then used to distinguish normal and cyberattack scenarios.
-
-The provided scripts include dataset preprocessing, model training, anomaly score calculation, threshold selection, and model evaluation using accuracy, precision, recall, F1-score, false positive rate, false negative rate, and confusion matrix metrics.
 
 ## Description
 
@@ -74,4 +66,4 @@ Load-frequency control (LFC) comprises a primary process in interconnected elect
 
 All materials in this repository may be used for academic and research purposes, provided that the related academic publication is properly cited.
 
-Please cite the related paper if you use the MATLAB/Simulink models, benchmark scripts, cyberattack scenarios, datasets, or deep learning baseline files provided in this repository.
+Please cite the related paper if you use the MATLAB/Simulink models, benchmark scripts, cyberattack scenarios, or datasets files provided in this repository.
